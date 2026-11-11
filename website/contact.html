@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Jasper Van Laere</title>
+
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #172033;
+            background-color: #f2f6fa;
+        }
+
+        header {
+            padding: 25px;
+            margin-bottom: 30px;
+            color: white;
+            background-color: #1d3557;
+            border-radius: 12px;
+        }
+
+        header h1 {
+            margin-top: 0;
+            color: #ff7043;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: #1d3557;
+            border-bottom: 2px solid #ff7043;
+            padding-bottom: 5px;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+            max-width: 600px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            font: inherit;
+            border: 1px solid #b8c2ce;
+            border-radius: 6px;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            width: fit-content;
+            padding: 10px 20px;
+            color: white;
+            background-color: #ff7043;
+            border: 0;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e85d32;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Contact</h1>
+
+        <nav aria-label="Hoofdnavigatie">
+            <ul>
+                <li><a href="index.html">Over mij</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Neem contact met mij op</h2>
+
+            <p>
+                Je kunt mij contacteren via
+                <a href="mailto:jasper.vanlaere@outlook.com">
+                    jasper.vanlaere@outlook.com
+                </a>.
+            </p>
+
+            <form action="mailto:jasper.vanlaere@outlook.com" method="post" enctype="text/plain">
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" name="naam" required>
+
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="bericht">Bericht</label>
+                <textarea id="bericht" name="bericht" required></textarea>
+
+                <button type="submit">Versturen</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
