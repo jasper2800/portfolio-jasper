@@ -4,56 +4,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description"
+        content="Projectdetail van de portfolio website van Jasper Van Laere, gemaakt met HTML en CSS.">
     <title>Portfolio website - Jasper Van Laere</title>
 
     <style>
+        :root {
+            --donkerblauw: #1d3557;
+            --tekst: #172033;
+            --oranje: #ff7043;
+            --achtergrond: #f2f6fa;
+            --wit: #ffffff;
+            --rand: #d9e1eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 24px 16px;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #172033;
-            background-color: #f2f6fa;
+            color: var(--tekst);
+            background-color: var(--achtergrond);
         }
 
         header,
         section {
-            padding: 25px;
-            margin-bottom: 30px;
             border-radius: 12px;
         }
 
         header {
-            color: white;
-            background-color: #1d3557;
+            padding: 32px 24px;
+            color: var(--wit);
+            background-color: var(--donkerblauw);
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
         }
 
         h1 {
-            color: #ff7043;
+            color: var(--oranje);
         }
 
         h2 {
-            color: #1d3557;
-            border-bottom: 2px solid #ff7043;
+            color: var(--donkerblauw);
+            border-bottom: 2px solid var(--oranje);
             padding-bottom: 5px;
+        }
+
+        nav {
+            margin-top: 24px;
         }
 
         nav ul {
             display: flex;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin: 0;
             padding: 0;
             list-style: none;
         }
 
         nav a {
-            color: white;
+            color: var(--wit);
             font-weight: bold;
         }
 
+        a {
+            color: var(--donkerblauw);
+        }
+
+        a:hover {
+            color: var(--oranje);
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--oranje);
+            outline-offset: 3px;
+        }
+
+        nav a[aria-current="page"] {
+            color: var(--oranje);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        main {
+            margin-top: 30px;
+        }
+
         section {
-            background-color: white;
+            margin-bottom: 24px;
+            padding: 24px;
+            background-color: var(--wit);
+        }
+
+        .project-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 16px 0 20px;
+            border: 1px solid var(--rand);
+            border-radius: 10px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            header,
+            section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -61,7 +136,7 @@
 <body>
     <header>
         <h1>Portfolio website</h1>
-        <p>Project van het vak User Interfaces</p>
+        <p>Project voor het vak User Interfaces</p>
 
         <nav aria-label="Hoofdnavigatie">
             <ul>
@@ -78,16 +153,42 @@
         <section>
             <h2>Beschrijving</h2>
             <p>
-                Voor dit project maakte ik een persoonlijke portfolio website met
-                HTML en CSS.
+                Voor dit project maakte ik een persoonlijke portfolio website
+                voor mijn opleiding Graduaat Programmeren bij Thomas More.
+                De website toont wie ik ben, welke opleiding ik volg en aan
+                welke projecten ik werk.
+            </p>
+        </section>
+
+        <section>
+            <h2>Mijn resultaat</h2>
+            <img class="project-image" src="media/screenshot-portfolio.png" alt="Screenshot van mijn portfolio website"
+                width="1920" height="1080">
+            <p>
+                De website bestaat uit meerdere pagina's met een vaste
+                navigatie en een herkenbare visuele stijl. Ik gebruikte
+                donkerblauw, oranje, wit en lichtgrijs als hoofdkleuren.
             </p>
         </section>
 
         <section>
             <h2>Evolutie</h2>
+            <ol>
+                <li>Ik begon met een eenvoudige HTML-pagina.</li>
+                <li>Daarna voegde ik meerdere pagina's en navigatie toe.</li>
+                <li>Ik voegde mijn foto, projecten en externe links toe.</li>
+                <li>Daarna werkte ik de CSS uit met kleuren, kaarten en witruimte.</li>
+                <li>Tot slot controleerde ik de links en de mobiele weergave.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Wat heb ik geleerd?</h2>
             <p>
-                Ik begon met een eenvoudige HTML-pagina. Daarna voegde ik
-                navigatie, afbeeldingen, meerdere pagina’s en CSS toe.
+                Tijdens dit project leerde ik werken met semantische HTML,
+                CSS-layouts, relatieve bestandsverwijzingen en een consistente
+                navigatie. Ik leerde ook dat bestandsnamen en afbeeldingspaden
+                exact moeten overeenkomen.
             </p>
         </section>
 
@@ -97,21 +198,19 @@
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Visual Studio Code</li>
+                <li>GitHub</li>
             </ul>
         </section>
 
         <section>
             <h2>Code</h2>
-
             <p>
-                Bekijk de code van dit project op GitHub:
+                De broncode van dit project staat op GitHub:
             </p>
-
-            <p>
-                <a href="https://github.com/jasper2800/portfolio-jasper" target="_blank" rel="noopener">
-                    Bekijk de code op GitHub
-                </a>
-            </p>
+            <a class="project-link" href="https://github.com/jasper2800/portfolio-jasper" target="_blank"
+                rel="noopener">
+                Bekijk de code op GitHub
+            </a>
         </section>
     </main>
 </body>
