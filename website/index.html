@@ -64,6 +64,44 @@
       border-bottom: 2px solid #ff7043;
       padding-bottom: 5px;
     }
+
+    @media (max-width: 600px) {
+      body {
+        width: 100%;
+        padding: 12px;
+        overflow-x: hidden;
+      }
+
+      header {
+        padding: 28px 20px;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+        line-height: 1.1;
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+      }
+
+      nav li {
+        width: 100%;
+      }
+
+      nav a {
+        display: block;
+        font-size: 1.1rem;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 
